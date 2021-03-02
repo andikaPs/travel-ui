@@ -18,7 +18,7 @@ body {
 }
 
 .card {
-  min-width: 350px;
+  width: 350px;
   height: 450px;
   background-color: #303030;
   border-radius: 10px;
@@ -34,6 +34,13 @@ body {
   overflow: hidden;
 }
 
+@media (max-width: 1000px) {
+  .card {
+    width: 250px;
+    height: 350px;
+  }
+}
+
 .card:hover::before {
   top: 0;
 }
@@ -46,7 +53,7 @@ body {
   bottom: 5vmin;
 }
 
-@media screen and (max-width: 579px) {
+@media (max-width: 1000px) {
   .card:hover .card__button {
     bottom: 10vmin;
   }
@@ -85,9 +92,21 @@ body {
   text-shadow: 2px 2px 2px rgba(16, 16, 16, 0.2);
 }
 
+@media (max-width: 1000px) {
+  .card__title h2 {
+    font-size: 1.5rem;
+  }
+}
+
 .card__title p {
   font-weight: 400;
   text-shadow: 2px 2px 2px rgba(16, 16, 16, 0.2);
+}
+
+@media (max-width: 1000px) {
+  .card__title p {
+    font-size: 0.9rem;
+  }
 }
 
 .card__button {
@@ -107,5 +126,12 @@ body {
   border-radius: 50px;
   text-decoration: none;
   cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+  .card__button a {
+    padding: 0.5rem 1.5rem;
+    font-size: 0.7rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
